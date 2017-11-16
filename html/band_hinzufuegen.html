@@ -4,9 +4,10 @@
     <body>
         <meta charset="UTF-8"/>
         
-        <h3>Füge eine Band der Liste hinzu:</h3>
+        <h3>Füge eine Band oder ein Konzert der Liste hinzu:</h3>
     
         <form>
+            <h4>Band hinzufügen:</h4>
             Bandname: <input type="text" name="bandname"></br>
             Gründungsjahr: <input type="number" min="1900" max="2099" step="1" value="2016" /></br>
             <label>Genre:
@@ -21,16 +22,37 @@
                 </select>
             </label>
         </form> 
-            <button>Hinzufügen</button></br>
-            <h4>Optional:</h4>
-            <input type="checkbox" name="Wacken" value="wacken">Haben bereits bei Wacken gespielt
+        <button>Hinzufügen</button></br>
+        <h4>Optional:</h4>
+        <input type="checkbox" name="Wacken" value="wacken">Haben bereits bei Wacken gespielt
+        <h4>Konzert hinzufügen:</h4>
+        <form>
+            Datum:<input type="date" id="albumdate">
+            Band: <input type="search" list="Bands">
+            <datalist id="Bands"> 
+                <option value="Amon Amarth"> 
+                <option value="Arch Enemy"> 
+                <option value="Nightwish"> 
+                <option value="Cripper"> 
+                <option value="Abnormality"> 
+                <option value="MGLA"> 
+                <option value="Dark Funeral"> 
+                <option value="Powerwolf">
+            </datalist> 
+            Stadt:<input type="search" list="Städte"> 
+            <button>Hinzufügen</button>
+            
+        </form>
             
         </br>
-        <a href="../html/tabelle.html">Tabelle</a>
+        <a href="../html/tabelle.html">Bandtabelle</a>
         <a href="../index.html">Homepage</a></br>
+        <a href="Konzerttabelle.html">Konzerttabelle</a>
       
         </br>
-        Fehlt dir eine Band in unserem Verzeichnis? Füge sie ruhig mithilfe dieses Formulares hinzu.
+        <div>
+            Fehlt dir eine Band oder ein Konzert in unserem Verzeichnis? Füge eins von    beiden ruhig mithilfe dieses Formulares hinzu.
+        </div>    
         </br>
         !Achtung, alle Angaben, bis auf Optional, müssen angegeben sein!
         </br></br>
