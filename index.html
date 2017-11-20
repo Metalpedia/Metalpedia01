@@ -6,67 +6,97 @@
     </head>
     <body>
         <div align='center'><img src="Bilder/Black-Metal-HD-Wallpapers-2.jpg" width="500" alt="METAL!!!"></div>
-        
-        </br>
+        <br>
         <div align='center'><h3>Willkommen auf der einzig Trven Metal Seite</h3></div>
-        </br>
-        <p>Du suchst eine Band die zu dir passt? Dann bist du hier genau richtig!</p>
-        <form>
-            <input type="search" list="Bands">
-            <datalist id="Bands"> 
-                <option value="Amon Amarth"> 
-                <option value="Arch Enemy"> 
-                <option value="Nightwish"> 
-                <option value="Cripper"> 
-                <option value="Abnormality"> 
-                <option value="MGLA"> 
-                <option value="Dark Funeral"> 
-                <option value="Powerwolf">
-            </datalist> 
-            <button>Suchen</button>
-            Erscheinungsdatum des letzten Albums:
-            <input type="date" id="albumdate">
-            <a href="html/tabelle.html">Bandtabelle</a>
-            <a href="html/band_hinzufuegen.html">Band oder Konzert hinzufügen</a>
-            <a href="html/Konzerttabelle.html">Konzerttabelle</a>
-            <meta charset="UTF-8"/>
-            </br>
-        <p>
-            <form action="tabelle.html" id="suche">
-                
-            <label>Genre:
-                <select name="Beliebte Genres" size="4" multiple>
-                    <option>Death Metal</option>
-                    <option>Trash Metal</option>
-                    <option>Black Metal</option>
-                    <option>Power Metal</option>
-                    <option>Symphonic Metal</option>
-                    <option>NWBHM</option>
-                    <option>Grindcore</option>
-                </select>
-            </label>  
-            <label>Bandmail: <input type="email" name="email"></label>    
-            </form>    
-            <label for="gebdat">
-            Gründungsjahr: 
-            <input type="number" min="1900" max="2099" step="1" value="2016" />
-            <input type="checkbox" name="Wacken" value="wacken">Haben bereits bei Wacken gespielt
-            </label>
+        <p align = "center">Du suchst eine Band die zu dir passt? Dann bist du hier genau richtig!</p>
+        <table style="width:100%" border="1">
+            <tr>
+                <th>Einfache Suche</th>
+                <th>Komplette List</th>
+            </tr>
+            <tr>
+                <td><form action="tabelle.html" id="suche">
+                    Bandname:<br>
+                    <input type="search" list="Bands">
+                    <datalist id="Bands"> 
+                        <option value="Amon Amarth"> 
+                        <option value="Arch Enemy"> 
+                        <option value="Nightwish"> 
+                        <option value="Cripper"> 
+                        <option value="Abnormality"> 
+                        <option value="MGLA"> 
+                        <option value="Dark Funeral"> 
+                        <option value="Powerwolf">
+                    </datalist>
+                    </form>
+                    <p>
+                    <form action="tabelle.html" id="suche">   
+                    <label>Genre:<br>
+                        <select name="Beliebte Genres" size="2" multiple>
+                            <option>Death Metal</option>
+                            <option>Trash Metal</option>
+                            <option>Black Metal</option>
+                            <option>Power Metal</option>
+                            <option>Symphonic Metal</option>
+                            <option>NWBHM</option>
+                            <option>Grindcore</option>
+                        </select>
+                    </label>
+                    <br><br>
+                    <button>Suchen</button>
+                    </form></p>
+                </td>
+                <td>
+                    <p><a href="html/tabelle.html">Bandtabelle</a></p><br>
+                    <p><a href="html/band_hinzufuegen.html">Band oder Konzert hinzufügen</a></p><br>
+                    <p><a href="html/Konzerttabelle.html">Konzerttabelle</a></p>
+                </td><br>
+            </tr>
+            <tr>
+                <th>Erweiterte Suche</th>
+            </tr>
+            <tr>
+                <td><br>
+                    
+                    <label for="gebdat">
+                    Gründungsjahr:<br> 
+                    <input type="number" min="1900" max="2099" step="1" value="2016" />
+                    <p>Herkunft:<br>
+                    <input type="search" list="Herkunft"></p>
+                    <p>
+                    Erscheinungsdatum des letzten Albums:<br>
+                    <input type="date" id="albumdate">
+
+                    <meta charset="UTF-8"/>
+                    </p>
+                    <p>
+                    <input type="checkbox" name="Wacken" value="wacken">Haben bereits bei Wacken gespielt
+                    </label>
+                    </p>
+                    <p>
+                        <button type="submit">Erweitert suchen</button>
+                    </p> 
+                    </form>
+                    </p>
+            </td>          
+        </tr>
+        </table>
+        <br><br>
+        <table>
             <p>
-                <button type="submit">Erweitert suchen</button>
-            </p>    
-        </form>
-        </p>
-        </br>
-        <div align="center">Metalpedia ist das kleine Taschenbuch für Metalheads und solche, die es werden wollen!</br>
-        Wir erfreuen uns euch immer eine aktuelle Liste von Metal-Bands präsentieren zu können, welche ihr mithilfe der Namen, des Genres und/oder des Gründungsjahres finden könnt.</br>
-        Sucht ihr nur nach Bands, welche bereits auf Wacken gespielt haben? Kein Problem!</br>
-        Falls ihr eine Band vermissen solltet, könnt ihr diese auch gerne über das Formular "Band Hinzufügen" eintragen.
-        </br>
-        <h3>Stay trve!</h3>
-        <footer>
-        Erstellt von Julia Sparre und Nicholas Larson</footer>
-        </div>
-        </form>
+                <div align="center">Metalpedia ist das kleine Taschenbuch für Metalheads und solche, die es werden wollen!</br>
+                    Wir erfreuen uns euch immer eine aktuelle Liste von Metal-Bands präsentieren zu können, welche ihr mithilfe der Namen, des Genres und/oder des Gründungsjahres finden könnt.</br>
+                    Sucht ihr nur nach Bands, welche bereits auf Wacken gespielt haben? Kein Problem!</br>
+                    Falls ihr eine Band vermissen solltet, könnt ihr diese auch gerne über das Formular "Band Hinzufügen" eintragen.
+                    </br>
+                    <h3>Stay trve!</h3>
+                </div>
+            </p>
+        </table>
+        <br>
+        <footer align="center">
+            Erstellt von Julia Sparre und Nicholas Larson 
+            <a href="html/kontakt.html">Kontakt</a>
+        </footer>
     </body>
 </html>    

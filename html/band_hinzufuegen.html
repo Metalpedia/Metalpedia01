@@ -4,61 +4,94 @@
     <body>
         <meta charset="UTF-8"/>
         
-        <h3>Füge eine Band oder ein Konzert der Liste hinzu:</h3>
+        <div align='center'><h3>Füge eine Band oder ein Konzert der Liste hinzu:</h3></div>
+        <br>
+        <p><div>
+            Fehlt dir eine Band oder ein Konzert in unserem Verzeichnis? Füge eins von beidem mithilfe dieses Formulares hinzu.
+        </div></p>
     
-        <form>
-            <h4>Band hinzufügen:</h4>
-            Bandname: <input type="text" name="bandname"></br>
-            Gründungsjahr: <input type="number" min="1900" max="2099" step="1" value="2016" /></br>
-            <label>Genre:
-                <select name="Genres" size="4" multiple>
-                    <option>Death Metal</option>
-                    <option>Trash Metal</option>
-                    <option>Black Metal</option>
-                    <option>Power Metal</option>
-                    <option>Symphonic Metal</option>
-                    <option>NWBHM</option>
-                    <option>Grindcore</option>
-                </select>
-            </label>
-        </form> 
-        <button>Hinzufügen</button></br>
-        <h4>Optional:</h4>
-        <input type="checkbox" name="Wacken" value="wacken">Haben bereits bei Wacken gespielt
-        <h4>Konzert hinzufügen:</h4>
-        <form>
-            Datum:<input type="date" id="albumdate">
-            Band: <input type="search" list="Bands">
-            <datalist id="Bands"> 
-                <option value="Amon Amarth"> 
-                <option value="Arch Enemy"> 
-                <option value="Nightwish"> 
-                <option value="Cripper"> 
-                <option value="Abnormality"> 
-                <option value="MGLA"> 
-                <option value="Dark Funeral"> 
-                <option value="Powerwolf">
-            </datalist> 
-            Stadt:<input type="search" list="Städte"> 
-            <button>Hinzufügen</button>
-            
-        </form>
-            
-        </br>
-        <a href="../html/tabelle.html">Bandtabelle</a>
-        <a href="../index.html">Homepage</a></br>
-        <a href="Konzerttabelle.html">Konzerttabelle</a>
-      
-        </br>
-        <div>
-            Fehlt dir eine Band oder ein Konzert in unserem Verzeichnis? Füge eins von    beiden ruhig mithilfe dieses Formulares hinzu.
-        </div>    
-        </br>
-        !Achtung, alle Angaben, bis auf Optional, müssen angegeben sein!
-        </br></br>
-        <div align="center"> 
-        <footer>
-        Erstellt von Julia Sparre und Nicholas Larson</footer></div>
+        <table style="width=100%" border="1">
+            <tr>
+                <th>Band Hinzufügen</th>
+            </tr>
+            <tr>
+                <td>
+                    <form>
+                        Bandname:<br> 
+                        <input type="text" name="bandname">
+                        <p>Gründungsjahr:<br> 
+                        <input type="number" min="1900" max="2099" step="1" value="2016" /></p>
+                        <p><label>Genre:
+                            <select name="Genres" size="2" multiple>
+                                <option>Death Metal</option>
+                                <option>Trash Metal</option>
+                                <option>Black Metal</option>
+                                <option>Power Metal</option>
+                                <option>Symphonic Metal</option>
+                                <option>NWBHM</option>
+                                <option>Grindcore</option>
+                            </select></p>
+                        </label>
+                        <p>Herkunft:<br>
+                        <input type="text" ></p>
+                    </form> 
+                    <h4>Optional:</h4>
+                    <p>Youtube Link:<br>
+                    <input type="text" name="Link" value="Einbettungslink"></p>
+                    <p><input type="checkbox" name="Wacken" value="wacken">Haben bereits bei Wacken gespielt</p>
+                    <p><button action="tabelle.html">Hinzufügen</button><br></p>  
+                </td>
+            </tr><br>
+            <tr>
+                <th>Konzert Hinzufügen</th>
+            </tr>
+            <tr>
+                <td><form>
+                        Datum:<br>
+                        <input type="date" id="albumdate">
+                        <p>Band:<br>
+                        <input type="search" list="Bands"></p>
+                        <p><datalist id="Bands"> 
+                            <option value="Amon Amarth"> 
+                            <option value="Arch Enemy"> 
+                            <option value="Nightwish"> 
+                            <option value="Cripper"> 
+                            <option value="Abnormality"> 
+                            <option value="MGLA"> 
+                            <option value="Dark Funeral"> 
+                            <option value="Powerwolf">
+                        </datalist></p>
+                        <p><label>Genre:
+                            <select name="Genres" size="2" multiple>
+                                <option>Death Metal</option>
+                                <option>Trash Metal</option>
+                                <option>Black Metal</option>
+                                <option>Power Metal</option>
+                                <option>Symphonic Metal</option>
+                                <option>NWBHM</option>
+                                <option>Grindcore</option>
+                            </select></p>
+                        </label>
+                        <p>Stadt:<br>
+                        <input type="search" list="Städte"></p> 
+                        <p><button action="konzerttabelle.html">Hinzufügen</button></p>
+                    </form>
+                </td>
+            </tr>
+        </table>   
+        <br><br>
+        !Achtung, alle Angaben bis auf Optional, müssen angegeben sein!
+        <br>
+        <p>
+            <a href="../index.html">Homepage</a>
+            <a href="../html/tabelle.html">Bandtabelle</a>
+            <a href="Konzerttabelle.html">Konzerttabelle</a>
+        </p>
+        <br><br>
+        <footer align="center">
+            Erstellt von Julia Sparre und Nicholas Larson 
+            <a href="kontakt.html">Kontakt</a>
+        </footer>
         
     </body>
 </html>
