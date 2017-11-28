@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <html>
-    <head><title>Band hinzufügen</title></head>
+    <head>
+         <meta charset="UTF-8"/>
+        <title>Band hinzufügen</title>
+    </head>
     <body>
-        <meta charset="UTF-8"/>
+       
         
         <div align='center'><h3>Füge eine Band oder ein Konzert der Liste hinzu:</h3></div>
         <br>
@@ -21,7 +24,7 @@
                         <input type="text" name="bandname">
                         <p>Gründungsjahr:<br> 
                         <input type="number" min="1900" max="2099" step="1" value="2016" /></p>
-                        <p><label>Genre:
+                        <p><label>Genre:</label>
                             <select name="Genres" size="2" multiple>
                                 <option>Death Metal</option>
                                 <option>Trash Metal</option>
@@ -30,14 +33,14 @@
                                 <option>Symphonic Metal</option>
                                 <option>NWBHM</option>
                                 <option>Grindcore</option>
-                            </select></p>
-                        </label>
+                            </select>
+                        </p>
                         <p>Herkunft:<br>
                         <input type="text" ></p>
                     </form> 
                     <h4>Optional:</h4>
                     <p>Youtube Link:<br>
-                    <input type="text" name="Link" value="Einbettungslink"></p>
+                    <input type="text" name="Link" placeholder="Einbettungslink"></p>
                     <p><input type="checkbox" name="Wacken" value="wacken">Haben bereits bei Wacken gespielt</p>
                     <p><button action="tabelle.html">Hinzufügen</button><br></p>  
                 </td>
@@ -70,8 +73,9 @@
                                 <option>Symphonic Metal</option>
                                 <option>NWBHM</option>
                                 <option>Grindcore</option>
-                            </select></p>
-                        </label>
+                            </select>
+                            </label></p>
+                        
                         <p>Stadt:<br>
                         <input type="search" list="Städte"></p> 
                         <p><button action="konzerttabelle.html">Hinzufügen</button></p>
