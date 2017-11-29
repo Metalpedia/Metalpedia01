@@ -1,12 +1,38 @@
 html{
     background-color: black;
+    border-right: 220px solid lightgray;
+    color: white;
 }
-div{
-    color: white
+#Navigation{
+    color:black;
+    border: 8px solid black;
+    border-radius: 15%;
+    position: fixed;
+    width: 200px;
+    top: 10px;
+    right: 2px;
 }
-form{
-    color: white
+a:hover{
+    animation: grow 0.5s forwards;
 }
 table{
-    color:white
+    
+    border-width: 5px;
+    border-color: orange
 }
+
+button:hover{
+    color: blue;
+    resize: both;
+    width: 50%;
+}
+@keyframes grow{
+    0 {
+        font-size: 0;
+    }
+    100%{
+        font-size: 130%;
+        
+    }
+}
+
