@@ -7,18 +7,14 @@
         <title>Metalpedia</title>
     </head>
     <body>
-        <div align='center'><img src="Bilder/Black-Metal-HD-Wallpapers-2.jpg" width="50%" alt="METAL!!!"></div>
-        <br>
-        <div align='center'><h3>Willkommen auf der einzig Trven Metal Seite</h3></div>
-        <div><p align = "center">Du suchst eine Band die zu dir passt? Dann bist du hier genau richtig!</p></div>
-        <table style="width:100%" border="1">
-            <tr>
-                <th>Einfache Suche</th>
-            </tr>
-            <tr>
-                <td><form action="tabelle.html" id="suche">
+        <div class="banner"></div><br><br>
+        <div class="content"><h3>Willkommen auf der einzig Trven Metal Seite</h3>
+        Du suchst eine Band die zu dir passt? Dann bist du hier genau richtig!</div><br>
+        <div class="insert">
+            <h4>Einfache Suche </h4><br>
+            <form action="tabelle.html" id="suche" >
                     Bandname:<br>
-                    <input type="search" list="Bands">
+                    <input type="search" list="Bands" placeholder="Amon Amarth">
                     <datalist id="Bands"> 
                         <option value="Amon Amarth"> 
                         <option value="Arch Enemy"> 
@@ -29,9 +25,8 @@
                         <option value="Dark Funeral"> 
                         <option value="Powerwolf">
                     </datalist>
-                    </form>
-                    <p>
-                    <form action="html/tabelle.html" id="suche">   
+            </form><br>
+            <form action="html/tabelle.html" id="suche">   
                     <label>Genre:<br>
                         <select name="Beliebte Genres" size="2" multiple>
                             <option>Death Metal</option>
@@ -42,64 +37,47 @@
                             <option>NWBHM</option>
                             <option>Grindcore</option>
                         </select>
-                    </label>
-                    <br><br>
-                    <button type="submit">Suchen</button>
-                    </form>
-                </td>
-                
-            </tr>
-            <tr>
-                <th>Erweiterte Suche</th>
-            </tr>
-            <tr>
-                <td><br>
-                    <form>
-                    <label for="gebdat">
-                    Gründungsjahr:<br> 
-                    <input type="number" min="1900" max="2099" step="1" value="2016" />
-                    <p>Herkunft:<br>
-                    <input type="search" list="Herkunft"></p>
-                    <p>
+                    </label><br><br>
+                <button type="submit" value="Submit" type="submit">Suchen</button>
+            </form><br>
+        </div><br><br>
+        <div class="insert">
+            <h4>Erweiterte Suche </h4><br>
+            <form>
+                 Gründungsjahr:<br> 
+                    <input type="number" min="1900" max="2099" step="1" placeholder="2016" /> <br><br>
+                    Herkunft:<br>
+                    <input type="search" list="Herkunft" placeholder="Schweden"><br><br>
                     Erscheinungsdatum des letzten Albums:<br>
-                    <input type="date" id="albumdate">
+                    <input type="date" id="albumdate"><br><br>
+                    <input type="checkbox" name="Wacken" value="wacken">Haben bereits bei Wacken gespielt <br><br>
+                <button type="submit" value="Submit" type="submit">Erweitert suchen</button>
+            </form><br>
+        </div>
 
-                   
-                    </p>
-                    <p>
-                    <input type="checkbox" name="Wacken" value="wacken">Haben bereits bei Wacken gespielt
-                    </p>
-                    </label>
-                   
-                    <p>
-                        <button type="submit">Erweitert suchen</button>
-                    </p> 
-                    </form>
-                   
-            </td>          
-        </tr>
-        </table>    
         <br><br>
-        <div id="Navigation">
+        <div class="navi_side">
             <h3>Komplette List</h3>
-           <p><a href="html/tabelle.html">Bandtabelle</a></p><br>
-                <p><a href="html/band_hinzufuegen.html">Band oder Konzert hinzufügen</a></p><br>
-                <p><a href="html/Konzerttabelle.html">Konzerttabelle</a></p>
+                <a href="index.html">Home</a><br>
+                <a href="html/tabelle.html">Bandtabelle</a><br>
+                <a href="html/band_hinzufuegen.html">Band oder Konzert hinzufügen</a><br>
+                <a href="html/Konzerttabelle.html">Konzerttabelle</a>
         </div><br>    
-        <table>
-            <p>
-            <div align="center"><p>Metalpedia ist das kleine Taschenbuch für Metalheads und solche, die es werden wollen!</p>
-                   <p> Wir erfreuen uns euch immer eine aktuelle Liste von Metal-Bands präsentieren zu können, welche ihr mithilfe der Namen, des Genres und/oder des Gründungsjahres finden könnt.</p>
-                    <p>Sucht ihr nur nach Bands, welche bereits auf Wacken gespielt haben? Kein Problem!</p>
-                    <p>Falls ihr eine Band vermissen solltet, könnt ihr diese auch gerne über das Formular "Band Hinzufügen" eintragen.
-                </p>
+            <div class="content"><br>
+                    Metalpedia ist das kleine Taschenbuch für Metalheads und solche, die es werden wollen!
+                   Wir erfreuen uns euch immer eine aktuelle Liste von Metal-Bands präsentieren zu können, welche ihr mithilfe der Namen, des Genres und/oder des Gründungsjahres finden könnt.
+                    Sucht ihr nur nach Bands, welche bereits auf Wacken gespielt haben? Kein Problem!
+                    Falls ihr eine Band vermissen solltet, könnt ihr diese auch gerne über das Formular "Band Hinzufügen" eintragen.
+              
                     <h3>Stay trve!</h3>
                 </div>
-        </table>
         <br>
-        <footer align="center">
-            <div>Erstellt von Julia Sparre und Nicholas Larson</div> 
-            <a href="html/kontakt.html">Kontakt</a>
+        <footer class="footer">
+            <div>
+                <a href="html/kontakt.html">Kontakt</a><br>
+                Erstellt von Julia Sparre und Nicholas Larson 
+            </div>
         </footer>
+        
     </body>
 </html>    

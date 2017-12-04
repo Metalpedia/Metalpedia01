@@ -1,38 +1,97 @@
-html{
-    background-color: black;
-    border-right: 220px solid lightgray;
-    color: white;
+a:link{ 
+  font-weight:bold; 
+  color: black; 
+  text-decoration:none;
 }
-#Navigation{
-    color:black;
-    border: 8px solid black;
-    border-radius: 15%;
-    position: fixed;
-    width: 200px;
-    top: 10px;
-    right: 2px;
+a:visited{
+     font-weight:bold;
+     color: dimgray;
+     text-decoration:none;
+}
+a:focus{
+     font-weight:bold;
+     color:red;
+     text-decoration:underline;
 }
 a:hover{
-    animation: grow 0.5s forwards;
+     font-weight:bold;
+     color:#8a0808;
+     text-decoration:none;
 }
-table{
-    
-    border-width: 5px;
-    border-color: orange
+a:active{
+     font-weight:bold;
+     color:#3b0b0b;
+     text-decoration:underline;
+}
+button{
+    background-color: white;
+    width: 200px;
+    height: 30px;
 }
 
 button:hover{
-    color: blue;
-    resize: both;
-    width: 50%;
-}
-@keyframes grow{
-    0 {
-        font-size: 0;
-    }
-    100%{
-        font-size: 130%;
-        
-    }
+    color: #8a0808;
+    
 }
 
+body{
+    background-image: url("../Bilder/Black-Fabric-Texture-Wallpaper.jpg"); 
+    font-family: sans-serif;
+    cursor: url("../Bilder/metalhand.png"), auto;
+}
+.navi_side{
+    position: fixed;
+    width: 110px;
+    top: 350px;
+    right:0px;
+    opacity: 0.8;
+    background-color: #ccc;
+    border: 1px inset gray;
+}
+.navi_side a{
+    display: block;
+    margin-left: 5px;
+}
+
+.banner{
+    background-image: url("../Bilder/Black-Metal-HD-Wallpapers-1.jpg");
+    opacity: 0.8;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    width: 500px;
+    height: 250px;
+}
+.page{
+    width: 800px;
+    margin: 0 auto;
+    border: 4px inset #3b0b0b;
+}
+.content{
+    text-align: center;
+    color: #ccc
+    width: 100%;
+    margin: 0 auto;
+    border: 1px solid gray;
+}
+.footer{
+    color: black;
+    width: 100%;
+    margin: 0 auto;
+    font-size: 13px;
+    text-align: center;
+}
+div{
+    background-color: lightgray;
+    opacity: 0.7;
+    border-style: outset;
+    border-radius: 10px;  
+}
+div.content{
+    width: auto;
+    margin-right: 115px;
+    
+}
+div.insert{
+    width:500px;
+}

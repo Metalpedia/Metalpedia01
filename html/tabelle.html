@@ -8,10 +8,12 @@
 
     </head>
     <body>
+        <div class="banner"></div><br><br>
+        <div class="content"><h3>Bandtabellen</h3></div><br>
+        <div class="content">Hier siehst du alle hammer Bands aus unserem Verzeichnis und kannst sie sogar nach den unten angegebenen Kriterien sortieren.</div><br><br>
         
-        <div align='center'><h3>Bandtabellen</h3></div><br>
-        Hier siehst du alle hammer Bands aus unserem Verzeichnis und kannst sie sogar nach den unten angegebenen Kriterien sortieren.</br></br>
-        <table style="width:50%" border="1">
+        <div class="content">
+            <table border="1">
             <tr>
                 <th>Bandname</th>
                 <th>Gründungsjahr</th>
@@ -48,32 +50,34 @@
                 <td><iframe width="150" height="100" src="https://www.youtube.com/embed/NzWizk3e4MM" frameborder="0" gesture="media" allowfullscreen></iframe></td>
                 <td>Ja</td>
             </tr>
-        </table><br>
-        <h4>Sortieren? Sortieren!</h4>
-        <input type="checkbox" name="Wacken" value="wacken">Haben bereits bei Wacken gespielt
-        <br>
-        <input type="radio" name="sort" value="jahrabst">Gründungsjahre absteigend sortieren
-        <br>
-        <input type="radio" name="sort" value="jahrauf">Gründungsjahre aufsteigend sortieren
-        <br>
-        <input type="radio" name="sort" value="genre">Nach Genre sortieren
-        <br>
-        <input type="radio" name="sort" value="alphabet">Namen alphabetisch sortieren
-        <br>
-        <input type="radio" name="sort" value="ralphabet">Namen alphabetisch rückwärts sortieren
-        <br><br>
-        <div id="Navigation">
+        </table>
+        </div><br><br>
+        <div class="insert">
+            <h4>Sortieren? Sortieren!</h4>
+            <input type="checkbox" name="Wacken" value="wacken">Haben bereits bei Wacken gespielt
+            <br>
+            <input type="radio" name="sort" value="jahrabst">Gründungsjahre absteigend sortieren
+            <br>
+            <input type="radio" name="sort" value="jahrauf">Gründungsjahre aufsteigend sortieren
+            <br>
+            <input type="radio" name="sort" value="genre">Nach Genre sortieren
+            <br>
+            <input type="radio" name="sort" value="alphabet">Namen alphabetisch sortieren
+            <br>
+            <input type="radio" name="sort" value="ralphabet">Namen alphabetisch rückwärts sortieren<br><br>
+        </div><br><br>
+         <div class="navi_side">
             <h3>Komplette List</h3>
-           <p><a href="../index.html">Homepage</a></p><br>
-                <p><a href="band_hinzufuegen.html">Band oder Konzert hinzufügen</a></p><br>
-                <p><a href="Konzerttabelle.html">Konzerttabelle</a></p>
-        </div><br>
-        <br>
-        <div align="center"> 
-        <br>
-        <footer align="center">
-            Erstellt von Julia Sparre und Nicholas Larson 
-            <a href="kontakt.html">Kontakt</a>
+                <a href="../index.html">Home</a><br>
+                <a href="../html/tabelle.html">Bandtabelle</a><br>
+                <a href="../html/band_hinzufuegen.html">Band oder Konzert hinzufügen</a><br>
+                <a href="../html/Konzerttabelle.html">Konzerttabelle</a>
+        </div><br>  
+        <footer class="footer">
+            <div>
+                <a href="../html/kontakt.html">Kontakt</a><br>
+                Erstellt von Julia Sparre und Nicholas Larson 
+            </div>
         </footer>
     </body>
 </html>    
