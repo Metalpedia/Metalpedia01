@@ -62,11 +62,6 @@ body{
     width: 500px;
     height: 250px;
 }
-.page{
-    width: 800px;
-    margin: 0 auto;
-    border: 4px inset #3b0b0b;
-}
 .content{
     text-align: center;
     color: #ccc
@@ -94,4 +89,11 @@ div.content{
 }
 div.insert{
     width:500px;
+}
+table, th, td{
+    border: 1px solid black;
+    
+}
+table{
+    width: 100%;
 }
