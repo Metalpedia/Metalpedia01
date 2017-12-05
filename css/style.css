@@ -17,6 +17,7 @@ a:hover{
      font-weight:bold;
      color:#8a0808;
      text-decoration:none;
+     animation: grow 0.4s forwards;
 }
 a:active{
      font-weight:bold;
@@ -41,7 +42,7 @@ body{
 }
 .navi_side{
     position: fixed;
-    width: 110px;
+    width: 120px;
     top: 350px;
     right:0px;
     opacity: 0.8;
@@ -96,4 +97,13 @@ table, th, td{
 }
 table{
     width: 100%;
+}
+
+@keyframes grow{
+    0{
+        font-size: 0;
+    }
+    100%{
+        font-size: 120%;
+    }
 }
