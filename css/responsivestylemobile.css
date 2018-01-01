@@ -89,7 +89,6 @@ div{
 div.content{
     width: auto;
     margin-right: 115px;
-    
 }
 div.insert{
     width:500px;
@@ -101,6 +100,9 @@ table, th, td{
 table{
     width: 100%;
 }
+iframe{
+    width: 60%;
+}
 
 @keyframes grow{
     0{
@@ -110,6 +112,11 @@ table{
         font-size: 120%;
     }
 }
+/*@media screen and (max-width:568px){
+    div{
+        background-color: red;
+    }
+}*/
 @media screen and (max-width: 650px) {
     .banner{
         background-size: 100%;
@@ -136,11 +143,21 @@ table{
     div.content{
         width: auto;
         margin: auto;
+        margin-right: 0;
     }
     .footer{
         font-size: 19px;
     }
     body{
         font-size: 1.3em;
+    }
+    table{
+        width: auto;
+        font-size: 0.7em;
+        left: 0;
+        right: 0;
+    }
+    iframe{
+        width: 50%;
     }
 }
