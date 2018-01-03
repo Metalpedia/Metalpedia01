@@ -44,7 +44,7 @@ body{
 }
 .navi_side{
     position: fixed;
-    width: 120px;
+    width: 170px;
     top: 350px;
     right:0px;
     opacity: 0.8;
@@ -88,7 +88,7 @@ div{
 }
 div.content{
     width: auto;
-    margin-right: 115px;
+    margin-right: 170px;
 }
 div.insert{
     width:500px;
@@ -127,12 +127,19 @@ iframe{
         right: auto;
         left: auto;
         width: auto;
+        text-align: center;
     }
-    .navi_side a{
+    
+    .navi_side li {
+        text-align: left;
         margin-left: auto;
+        display: inline-block;
+        margin-right: auto; 
+        padding: 0;
+       /* white-space: nowrap;*/
     }
     div.insert{
-        width:200px;
+        max-width:200px;
         text-align: center;
         margin: auto;
     }
@@ -148,13 +155,19 @@ iframe{
         font-size: 1.3em;
     }
     table{
-        width: auto;
-        font-size: 0.7em;
+        max-width: auto;
+        font-size: 1.1em;
         left: 0;
         right: 0;
     }
+    tr{
+        padding: 1.3em;
+    }
+    tr, th, td{
+        display: block;
+    }
     iframe{
-        width: 50%;
+        width: 100%;
     }
 }
 
@@ -176,6 +189,7 @@ iframe{
     .navi_side a{
         margin-left: auto;
     }
+    
     div.insert{
         width:400px;
         text-align: center;
@@ -199,6 +213,6 @@ iframe{
         right: 0;
     }
     iframe{
-        width: 50%;
+        width: 100%;
     }
 }
