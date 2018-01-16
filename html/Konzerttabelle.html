@@ -3,9 +3,55 @@
          <meta charset="UTF-8"/>
         <title>Konzerttabelle</title>
         <link href="../css/responsivestylemobile.css" type="text/css" rel="stylesheet">
+        <script>
+            function konzertDefault() {
+                return [
+                    {
+                        date: 'Konzertdatum',
+                        band: 'Band',
+                        gen: 'Genre',
+                        stadt: 'Stadt'
+                    },{
+                        date: '04.12.2017',
+                        band: 'Amon Amarth',
+                        gen: 'Death Metal',
+                        stadt: 'Köln'
+                    }
+                ]
+            }
 
+            function renderTable(liste){
+                let table = document.getElementById("tabkonzerte");
+                table.innerHTML = '';
+                console.log(liste);
+                liste.forEach(konz => {
+                    let tr = document.createElement('tr');
+                    let stub = "";
+                    stub += "<td>" + konz.date + "</td>";
+                    stub += "<td>" + konz.band + "</td>";
+                    stub += "<td>" + konz.gen + "</td>";
+                    stub += "<td>" + konz.stadt + "</td>";
+                    tr.innerHTML = stub;
+                    table.appendChild(tr);
+                })
+            }
+            
+            function init(){
+                let konzerteStr = localStorage.getItem('konzerte');
+                let konzerte = konzertDefault();
+                if(konzerteStr){
+                    konzerte = konzerte.concat(JSON.parse(konzerteStr));
+                }
+                
+                renderTable(konzerte);
+            }
+            function clearList(){
+                localStorage.removeItem('konzerte');
+                renderTable(konzertDefault());
+            }
+        </script>
     </head>
-    <body>
+    <body onLoad ="init()">
        
         <div class="banner"></div><br><br>
         <div class="content"><h3>Konzerttabelle</h3></div><br>
@@ -13,39 +59,11 @@
             Hier siehst du alle anstehenden Konzertdaten von Metalbands, die nach Deutschland kommen, damit du auch nichts verpasst.
         </div><br><br>
         <div class="content">
-        <table style="width:100%" border="1">
-            <tr>
-                <th>Konzertdatum</th>
-                <th>Band</th>
-                <th>Genre</th>
-                <th>Stadt</th>
-            </tr>
-            <tr>
-                <td>04.12.2017</td>
-                <td>Amon Amarth</td>
-                <td>Death Metal</td>
-                <td>Köln</td>
-            </tr>
-            <tr>
-                <td>05.01.2018</td>
-                <td>MGLA</td>
-                <td>Black Metal</td>
-                <td>Dresden</td>
-            </tr>
-            <tr>
-                <td>08.01.2018</td>
-                <td>Slayer</td>
-                <td>Thrash Metal</td>
-                <td>Dresden</td>
-            </tr>
-            <tr>
-                <td>13.01.2018</td>
-                <td>Iron Maiden</td>
-                <td>Heavy Metal</td>
-                <td>Berlin</td>
-            </tr>
+        <table style="width:100%" border="1" id="tabkonzerte">
         </table>
-        </div><br><br>
+        </div><br>
+        <div class="insert"><button onclick="clearList()">Liste löschen</button>
+        </div><br>
         <div class="insert">
             <h4>Sortieren? Sortieren!</h4>
             <input type="radio" name="Datum" value="datum">Datum

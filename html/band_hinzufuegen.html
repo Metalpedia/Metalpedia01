@@ -4,6 +4,49 @@
          <meta charset="UTF-8"/>
         <title>Band hinzufügen</title>
         <link href="../css/responsivestylemobile.css" type="text/css" rel="stylesheet">
+        <script>
+            let bands = [];
+            let konzerte = [];
+            function init(){
+                let bandsStr = localStorage.getItem('bands');
+                if(bandsStr){
+                    bands = JSON.parse(bandsStr);
+                }
+                let konzerteStr = localStorage.getItem('konzerte');
+                if(konzerteStr){
+                    konzerte = JSON.parse(konzerteStr);
+                }
+            }
+            
+            function band_hinz(){
+                let band = {};
+                band.name = document.getElementById("bandname").value;
+                band.grndjahr = document.getElementById("grndjahr").value;
+                band.genre = document.getElementById("genre").value;
+                band.herkunft = document.getElementById("herkunft").value;
+                band.link = document.getElementById("link").value;
+                band.wacken = document.getElementById("wacken").checked;
+                alert(JSON.stringify(band));
+                
+                bands.push(band);
+                localStorage.setItem('bands', JSON.stringify(bands));
+            }
+            
+            function konz_hinz(){
+                let konz = {};
+                konz.date = document.getElementById("date").value;
+                konz.band = document.getElementById("band").value;
+                konz.gen = document.getElementById("gen").value;
+                konz.stadt = document.getElementById("stadt").value;
+                alert(JSON.stringify(konz));
+                
+                konzerte.push(konz);
+                localStorage.setItem('konzerte', JSON.stringify(konzerte));
+                
+            }
+            
+            init();
+        </script> 
     </head>
     <body>
        
@@ -15,13 +58,13 @@
         </div><br>
         <div class="insert">
             <h4>Band hinzufügen</h4><br>
-            <form><br>
+            <form onsubmit="band_hinz(); return false;"><br>
                  Bandname:<br> 
-                 <input type="text" name="bandname" placeholder="Amon Amarth"><br><br>
+                 <input type="text" name="bandname" placeholder="Amon Amarth" id="bandname"><br><br>
                  Gründungsjahr:<br> 
-                 <input type="number" min="1900" max="2099" step="1" placeholder="2016" /><br><br>
+                 <input type="number" min="1900" max="2099" step="1" placeholder="2016" id="grndjahr" /><br><br>
                  <label>Genre:</label>
-                        <select name="Genres" size="2" multiple>
+                        <select name="Genres" size="2" multiple id="genre">
                                 <option>Death Metal</option>
                                 <option>Trash Metal</option>
                                 <option>Black Metal</option>
@@ -31,22 +74,23 @@
                                 <option>Grindcore</option>
                         </select><br><br>
                         Herkunft:<br>
-                        <input type="text" placeholder="Schweden">
-                    </form><br> 
+                        <input type="text" placeholder="Schweden" id="herkunft">
+                    <br> 
                     <h4>Optional:</h4>
                     Youtube Link:<br>
-                    <input type="text" name="Link" placeholder="Einbettungslink"><br><br>
-                    <input type="checkbox" name="Wacken" value="wacken">Haben bereits bei Wacken gespielt<br><br>
+                    <input type="text" name="Link" placeholder="Einbettungslink" id="link"><br><br>
+                    <input type="checkbox" name="Wacken" value="wacken" id="wacken">Haben bereits bei Wacken gespielt<br><br>
                     <button type="submit" value="Submit" action="tabelle.html">Hinzufügen</button><br><br>
+            </form>
         </div><br>
         <div class="insert">
             <h4>Konzert Hinzufügen</h4><br>
-            <form><br>
+            <form onsubmit="konz_hinz(); return false;"><br>
                     Datum:<br>
-                        <input type="date" id="albumdate"><br><br>
+                        <input type="date" id="date"><br><br>
                         Bandname:<br>
-                        <input type="search" list="Bands" placeholder="Amon Amarth">
-                        <datalist id="Bands"> 
+                        <input type="search" list="Bands" placeholder="Amon Amarth" id="band">
+                        <datalist id="datalistband"> 
                             <option value="Amon Amarth"> 
                             <option value="Arch Enemy"> 
                             <option value="Nightwish"> 
@@ -57,7 +101,7 @@
                             <option value="Powerwolf">
                         </datalist><br><br>
                         <label>Genre:
-                            <select name="Genres" size="2" multiple>
+                            <select name="Genres" size="2" multiple id="gen">
                                 <option>Death Metal</option>
                                 <option>Trash Metal</option>
                                 <option>Black Metal</option>
@@ -69,9 +113,9 @@
                             </label><br><br>
                         
                         Stadt:<br>
-                        <input type="search" list="Städte" placeholder="Berlin"><br><br>
+                        <input type="search" list="Städte" placeholder="Berlin" id="stadt"><br><br>
                         <button type="submit" value="Submit" action="konzerttabelle.html">Hinzufügen</button><br><br>
-                    </form>
+            </form>
         </div><br>
         <div class="content">!Achtung, alle Angaben bis auf Optional, müssen angegeben sein!
         </div><br>

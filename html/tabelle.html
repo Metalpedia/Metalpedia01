@@ -5,53 +5,79 @@
         <meta charset="UTF-8"/>
         <title>Metalpedia Tabelle</title>
         <link href="../css/responsivestylemobile.css" type="text/css" rel="stylesheet">
-
+        <script>
+            let bands = [];
+            function bandDefault(){
+                return [
+                    {
+                        name: 'name',
+                        grndjahr: 'Gründungsjahr',
+                        genre: 'Genre',
+                        herkunft: 'Herkunft',
+                        link: 'Link',
+                        wacken: 'Wacken',
+                        
+                    },{
+                        name: 'Amon Amarth',
+                        grndjahr: '1992',
+                        genre: 'Death Metal',
+                        herkunft: 'Schweden',
+                        link: '<iframe width="150" height="100" src="https://www.youtube.com/embed/cSlYyOebGn4" frameborder="0" gesture="media" allowfullscreen></iframe>',
+                        wacken: 'Ja'
+                    }
+                ]
+            }
+            
+            function renderTable(liste){
+                let table = document.getElementById("tabbands");
+                table.innerHTML = '';
+                liste.forEach(band => {
+                let tr = document.createElement('tr');
+                let stub = "";
+                stub += "<td>" + band.name + "</td>";
+                stub += "<td>" + band.grndjahr + "</td>";
+                stub += "<td>" + band.genre + "</td>" ;
+                stub += "<td>" + band.herkunft + "</td>";
+                stub += "<td>" + band.link + "</td>";
+                if(band.wacken){
+                    stub += "<td>Ja</td>";
+                }
+                else{
+                    stub += "<td>Nein</td>";
+                } 
+                tr.innerHTML = stub;
+                table.appendChild(tr);
+                })
+            }
+            
+            function init(){
+                let bandsStr = localStorage.getItem('bands');
+                let bands = bandDefault();
+                if(bandsStr){
+                    bands = bands.concat(JSON.parse(bandsStr));
+                }
+                
+                renderTable(bands);
+                
+            }
+            function clearList(){
+                localStorage.removeItem('bands');
+                renderTable(bandDefault());
+            }
+        </script>
     </head>
-    <body>
+    <body onLoad="init()">
         <div class="banner"></div><br><br>
         <div class="content"><h3>Bandtabellen</h3></div><br>
         <div class="content">Hier siehst du alle hammer Bands aus unserem Verzeichnis und kannst sie sogar nach den unten angegebenen Kriterien sortieren.</div><br><br>
         
         <div class="content">
-            <table >
-            <tr>
-                <th>Bandname</th>
-                <th>Gründungsjahr</th>
-                <th>Genre</th>
-                <th>Herkunft</th>
-                <th>letztes Album</th>
-                <th>Link</th>
-                <th>Wacken</th>
-            </tr>
-            <tr>
-                <td>Amon Amarth</td>
-                <td>1992</td>
-                <td>Death Metal</td>
-                <td>Schweden</td>
-                <td>25.03.2016</td>
-                <td> <iframe width="150" height="100" src="https://www.youtube.com/embed/cSlYyOebGn4" frameborder="0" gesture="media" allowfullscreen></iframe></td>
-                <td>Ja</td>
-            </tr>
-            <tr>
-                <td>MGLA</td>
-                <td>2002</td>
-                <td>Black Metal</td>
-                <td>Polen</td>
-                <td>04.09.2015</td>
-                <td><iframe width="150" height="100" src="https://www.youtube.com/embed/Bdl1oQ0W-ls" frameborder="0" gesture="media" allowfullscreen></iframe></td>
-                <td>Nein</td>
-            </tr>
-            <tr>
-                <td>Nightwish</td>
-                <td>1996</td>
-                <td>Symphonic Metal</td>
-                <td>Finnland</td>
-                <td>25.03.2015</td>
-                <td><iframe width="150" height="100" src="https://www.youtube.com/embed/NzWizk3e4MM" frameborder="0" gesture="media" allowfullscreen></iframe></td>
-                <td>Ja</td>
-            </tr>
+            <table  id="tabbands">
         </table>
-        </div><br><br>
+        </div><br>
+        <div class="insert"><button onclick="clearList()">Liste löschen</button>
+        </div>
+        <br>
         <div class="insert">
             <h4>Sortieren? Sortieren!</h4>
             <input type="checkbox" name="Wacken" value="wacken">Haben bereits bei Wacken gespielt
