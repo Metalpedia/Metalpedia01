@@ -26,7 +26,6 @@
                 band.herkunft = document.getElementById("herkunft").value;
                 band.link = document.getElementById("link").value;
                 band.wacken = document.getElementById("wacken").checked;
-                alert(JSON.stringify(band));
                 
                 bands.push(band);
                 localStorage.setItem('bands', JSON.stringify(bands));
@@ -38,7 +37,6 @@
                 konz.band = document.getElementById("band").value;
                 konz.gen = document.getElementById("gen").value;
                 konz.stadt = document.getElementById("stadt").value;
-                alert(JSON.stringify(konz));
                 
                 konzerte.push(konz);
                 localStorage.setItem('konzerte', JSON.stringify(konzerte));
